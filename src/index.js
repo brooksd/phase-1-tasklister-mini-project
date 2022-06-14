@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const newTaskPriority = document.getElementById("new-task-priority");
 
   //live update of the tasks online
-  const newTaskUl = document.getElementById("tasks");
+  const newListOfTasks = document.getElementById("tasks");
 
   //attach event listeners
     newTaskForm.addEventListener("submit", createNewTask);
