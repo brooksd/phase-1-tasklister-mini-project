@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const newTaskDescription = document.getElementById("new-task-description");
   const newTaskPriority = document.getElementById("new-task-priority");
 
-  //ul where new tasks will live on the DOM
+  //live update of the tasks online
   const newTaskUl = document.getElementById("tasks");
 
   //attach event listeners
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const createNewTask = event => {
   event.preventDefault();
-  //stop form from trying to submit
+  
   const newTaskDescription = document.getElementById("new-task-description");
   const newTask = document.createElement("li");
   newTask.innerText = newTaskDescription.value;
@@ -22,6 +22,4 @@ const createNewTask = event => {
   event.target.reset();
 };
 
-const appendNewTask = task => {
-  document.getElementById("tasks").appendChild(task);
-};
+const appendNewTask = task => {  document.getElementById("tasks").appendChild(task);};
